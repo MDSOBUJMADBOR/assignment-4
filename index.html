@@ -7,8 +7,10 @@
           <!-- tailwindcss + daisy ui -->
            <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
           <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <!-- font-awesome -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-           <!-- font -->
+           <!--google font -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
@@ -44,7 +46,7 @@
 <main class="max-w-[1110px] mx-auto">
 <h1 class="text-xl pb-6">Available Jobs</h1>
 <!-- button -->
-<div class="">
+<div class="mb-3 flex gap-3">
      <button onclick="toggleStyle('all-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="all-filter-btn">All</button>
      <button onclick="toggleStyle('interview-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="interview-filter-btn">Interview</button>
      <button onclick="toggleStyle('rejected-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="rejected-filter-btn">Rejected</button>
@@ -57,16 +59,26 @@
 
 
 <!-- section all card -->
-<section id="allCards">
+<section id="allCards" >
           <!-- card-1 -->
-<div>     
+<div class="bg-white rounded-lg p-6 flex justify-between">     
           <!-- right -->
-          <div>
-                    
+          <div class="space-y-4">
+                <div>
+                  <h2 class="text-xl font-semibold">Mobile First Corp</h2>
+                  <p class="text-[#64748bFF]">React Native Developer</p>
+                </div> 
+                <p class="text-[#64748bFF]">Remote • Full-time •  $130,000 - $175,000</p>   
+                <p class="bg-gray-100 inline-block p-3 rounded-lg">Not Applied</p>
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <div class="flex gap-4">
+                  <button class="btn btn-outline btn-success uppercase">interview</button>
+                  <button class="btn btn-outline btn-secondary uppercase">Rejected</button>
+                </div>
           </div>
           <!-- left -->
            <div>
-
+            <button class="bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
            </div>
 </div>
 
@@ -78,7 +90,7 @@
 
 </main>
 
-
+<h1>sobuj</h1>
 </div>   
 
 </body>
