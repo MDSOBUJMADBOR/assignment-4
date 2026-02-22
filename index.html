@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Assignment-4</title>
+          <!-- tailwindcss + daisy ui -->
+           <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+           <!-- font -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+            <style>
+                    *{
+                              font-family: "Geist", sans-serif;
+                    }
+            </style>
+</head>
+<body>
+<div class="max-w-[1600px] bg-[#F8FAFC]">
+<!-- header -->
+<header class="max-w-[1110px] mx-auto">
+          <h1 class="text-3xl font-bold mb-5 pt-14">Job Application Tracker</h1>
+          <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-3">
+                    <p class="text-[14px]">Total</p>
+                    <p id="total" class="text-2xl font-bold">0</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3">
+                    <p class="text-[14px]">Interview</p>
+                    <p id="interviewCount" class="text-2xl text-green-500 font-bold">0</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3">
+                    <p class="text-[14px]">Rejected</p>
+                    <p id="rejectedCount" class="text-2xl text-red-500 font-bold">0</p>
+                    </div>
+                    
+          </div>
+</header>
+<hr class="max-w-[1110px] mx-auto my-5 text-[#e6e7e9FF]">
+<!-- main -->
+<main class="max-w-[1110px] mx-auto">
+<h1 class="text-xl pb-6">Available Jobs</h1>
+<!-- button -->
+<div class="">
+     <button onclick="toggleStyle('all-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="all-filter-btn">All</button>
+     <button onclick="toggleStyle('interview-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="interview-filter-btn">Interview</button>
+     <button onclick="toggleStyle('rejected-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="rejected-filter-btn">Rejected</button>
+</div>
+
+<!-- filtered card -->
+<section id="filtered-section" class="hidden">
+
+</section>
+
+
+<!-- section all card -->
+<section id="allCards">
+          <!-- card-1 -->
+<div>     
+          <!-- right -->
+          <div>
+                    
+          </div>
+          <!-- left -->
+           <div>
+
+           </div>
+</div>
+
+</section>
+
+
+
+
+
+</main>
+
+
+</div>   
+
+</body>
+</html>
