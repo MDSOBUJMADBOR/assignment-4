@@ -156,7 +156,7 @@ function renderInterview() {
   for(let interview of interviewList){
           
           let div = document.createElement('div');
-          div.className = 'bg-white rounded-lg p-6 flex justify-between';
+          div.className = 'bg-white rounded-lg p-6 flex flex-col gap-4 lg:flex-row justify-between';
           div.innerHTML = `
           <!-- right -->
           <div class="space-y-5">
@@ -192,7 +192,7 @@ function renderRejected() {
   for(let rejected of rejectedList){
           
           let div = document.createElement('div');
-          div.className = 'bg-white rounded-lg p-6 flex justify-between';
+          div.className = 'bg-white rounded-lg p-6 flex flex-col gap-4 lg:flex-row justify-between';
           div.innerHTML = `
           <!-- right -->
           <div class="space-y-5">
