@@ -20,7 +20,10 @@
                     }
             </style>
 </head>
+
+
 <body>
+
 <div class="max-w-[1600px] bg-[#F8FAFC]">
 <!-- header -->
 <header class="max-w-[1110px] mx-auto">
@@ -44,12 +47,15 @@
 <hr class="max-w-[1110px] mx-auto my-5 text-[#e6e7e9FF]">
 <!-- main -->
 <main class="max-w-[1110px] mx-auto">
-<h1 class="text-xl pb-6">Available Jobs</h1>
+<div class="flex justify-between">
+  <h1 class="text-xl pb-6">Available Jobs</h1>
+  <p> <span> 8 </span> jobs</p>
+</div>
 <!-- button -->
 <div class="mb-3 flex gap-3">
-     <button onclick="toggleStyle('all-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="all-filter-btn">All</button>
-     <button onclick="toggleStyle('interview-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="interview-filter-btn">Interview</button>
-     <button onclick="toggleStyle('rejected-filter-btn')" class="btn btn-outline btn-primary h-8 w-20" id="rejected-filter-btn">Rejected</button>
+     <button onclick="toggleStyle('all-filter-btn')" class="btn  bg-white text-gray-500 h-8 w-20" id="all-filter-btn">All</button>
+     <button onclick="toggleStyle('interview-filter-btn')" class="btn  bg-white text-gray-500 h-8 w-20" id="interview-filter-btn">Interview</button>
+     <button onclick="toggleStyle('rejected-filter-btn')" class="btn  bg-white text-gray-500 h-8 w-20" id="rejected-filter-btn">Rejected</button>
 </div>
 
 <!-- filtered card -->
@@ -59,29 +65,98 @@
 
 
 <!-- section all card -->
-<section id="allCards" >
+<section id="allCards" class="flex flex-col gap-4">
           <!-- card-1 -->
 <div class="bg-white rounded-lg p-6 flex justify-between">     
           <!-- right -->
-          <div class="space-y-4">
+          <div class="space-y-5">
                 <div>
-                  <h2 class="text-xl font-semibold">Mobile First Corp</h2>
-                  <p class="text-[#64748bFF]">React Native Developer</p>
+                  <h2 class="mobile text-xl font-semibold">Mobile First Corp</h2>
+                  <p class="react text-[#64748bFF]">React Native Developer</p>
                 </div> 
-                <p class="text-[#64748bFF]">Remote • Full-time •  $130,000 - $175,000</p>   
-                <p class="bg-gray-100 inline-block p-3 rounded-lg">Not Applied</p>
-                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <p class="remote text-[#64748bFF]">Remote • Full-time •  $130,000 - $175,000</p>   
+                <p class="stat bg-gray-100 inline p-3 rounded-lg uppercase">Not Applied</p><p></p>
+                <p class="build">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <div class="flex gap-4">
-                  <button class="btn btn-outline btn-success uppercase">interview</button>
-                  <button class="btn btn-outline btn-secondary uppercase">Rejected</button>
+                  <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
+                  <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
                 </div>
           </div>
           <!-- left -->
            <div>
-            <button class="bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
            </div>
 </div>
 
+
+<!-- card-2 -->
+<div class="bg-white rounded-lg p-6 flex justify-between">     
+          <!-- right -->
+          <div class="space-y-4">
+                <div>
+                  <h2 class="mobile text-xl font-semibold">WebFlow Agency</h2>
+                  <p class="react text-[#64748bFF]">Web Designer & Developer</p>
+                </div> 
+                <p class="remote text-[#64748bFF]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>   
+                <p class="statu bg-gray-100 inline-block p-3 rounded-lg">Not Applied</p>
+                <p class="build">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                <div class="flex gap-4">
+                  <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
+                  <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
+                </div>
+          </div>
+          <!-- left -->
+           <div>
+            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+           </div>
+</div>
+
+
+<!-- card-3 -->
+ <div class="bg-white rounded-lg p-6 flex justify-between">     
+          <!-- right -->
+          <div class="space-y-4">
+                <div>
+                  <h2 class="mobile text-xl font-semibold">DataViz Solutions</h2>
+                  <p class="react text-[#64748bFF]">Data Visualization Specialist</p>
+                </div> 
+                <p class="remote text-[#64748bFF]">Boston, MA • Full-time • $125,000 - $165,000</p>   
+                <p class="statu bg-gray-100 inline-block p-3 rounded-lg">Not Applied</p>
+                <p class="build">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                <div class="flex gap-4">
+                  <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
+                  <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
+                </div>
+          </div>
+          <!-- left -->
+           <div>
+            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+           </div>
+</div>
+
+
+<!-- card-4 -->
+
+<div class="bg-white rounded-lg p-6 flex justify-between">     
+          <!-- right -->
+          <div class="space-y-4">
+                <div>
+                  <h2 class="mobile text-xl font-semibold">CloudFirst Inc</h2>
+                  <p class="react text-[#64748bFF]">Backend Developer</p>
+                </div> 
+                <p class="remote text-[#64748bFF]">Seattle, WA • Full-time • $140,000 - $190,000</p>   
+                <p class="statu bg-gray-100 inline-block p-3 rounded-lg">Not Applied</p>
+                <p class="build">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                <div class="flex gap-4">
+                  <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
+                  <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
+                </div>
+          </div>
+          <!-- left -->
+           <div>
+            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+           </div>
+</div>
 </section>
 
 
@@ -90,8 +165,9 @@
 
 </main>
 
-<h1>sobuj</h1>
+
 </div>   
 
+<script src="./script.js"></script>
 </body>
 </html>
