@@ -39,7 +39,7 @@ function toggleStyle(id) {
    rejectedFilterBtn.classList.remove('bg-primary','text-white')
 
    const selected = document.getElementById(id);
-
+   currentStatus = id
 //    adding blackbg for current button
      selected.classList.remove('bg-white','text-gray-500');
      selected.classList.add('bg-primary','text-white');
@@ -74,7 +74,7 @@ mainContainer.addEventListener('click', function (event) {
  let mobile = parenNode.querySelector('.mobile').innerText;
  let react = parenNode.querySelector('.react').innerText;
  let remote = parenNode.querySelector('.remote').innerText;
- let stat = parenNode.querySelector('.stat').innerText;
+//  let stat = parenNode.querySelector('.stat').innerText;
  let build = parenNode.querySelector('.build').innerText;
 
  parenNode.querySelector('.stat').innerText = 'interview';
@@ -83,7 +83,7 @@ mainContainer.addEventListener('click', function (event) {
           mobile,
           react,
           remote,
-          stat,
+          stat:'interview',
           build
       }
 
@@ -91,6 +91,14 @@ mainContainer.addEventListener('click', function (event) {
 
   if(!plantExist){
           interviewList.push(cardInfo);
+  }
+
+  //removing the plant from rejected list 
+  rejectedList = rejectedList.filter(item => item.mobile != cardInfo.mobile);
+
+  //after remove rerender the html
+  if(currentStatus == 'rejected-filter-btn'){
+    renderRejected()
   }
 
    calculateCount()
@@ -104,7 +112,7 @@ mainContainer.addEventListener('click', function (event) {
  let mobile = parenNode.querySelector('.mobile').innerText;
  let react = parenNode.querySelector('.react').innerText;
  let remote = parenNode.querySelector('.remote').innerText;
- let stat = parenNode.querySelector('.stat').innerText;
+//  let stat = parenNode.querySelector('.stat').innerText;
  let build = parenNode.querySelector('.build').innerText;
 
  parenNode.querySelector('.stat').innerText = 'rejected';
@@ -113,7 +121,7 @@ mainContainer.addEventListener('click', function (event) {
           mobile,
           react,
           remote,
-          stat,
+          stat:'rejected',
           build
       }
 
@@ -121,6 +129,13 @@ mainContainer.addEventListener('click', function (event) {
 
   if(!plantExist){
           rejectedList.push(cardInfo);
+  }
+
+  //removing the plant from interview list
+  interviewList = interviewList.filter(item => item.mobile != cardInfo.mobile)
+
+  if(currentStatus == 'interview-filter-btn'){
+    renderInterview()
   }
 
    calculateCount()
