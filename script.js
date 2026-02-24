@@ -18,7 +18,7 @@ let mainContainer = document.querySelector('main');
 let filterSection = document.getElementById('filtered-section');
 
 let noJobs =document.getElementById('no-jobs');
-// let deleteBtn = document.getElementById('delete-btn')
+// let deleteBtn = document.getElementById('btn-delete')
 
 
 
@@ -32,7 +32,7 @@ calculateCount()
 
 // step -1;
 function toggleStyle(id) {
-  let variableCount = 0;
+  
           //adding gray bg for all
    allFilterBtn.classList.add('bg-white','text-gray-500');
    interviewFilterBtn.classList.add('bg-white','text-gray-500');
@@ -69,39 +69,23 @@ function toggleStyle(id) {
             
      }
 
-// simple
+
 if (id === 'interview-filter-btn' || id === 'rejected-filter-btn') {
 
   const filterCount = filterSection.children.length;
 
   if (filterCount === 0) {
     noJobs.classList.remove('hidden');
-  } else {
+  }
+   else {
     noJobs.classList.add('hidden');
   }
 
-} else {
+} 
+else {
   
   noJobs.classList.add('hidden');
 }
-
-// const filterCount = filterSection.children.length
-// if(filterCount == 0){
-//   if(noJobs.classList.contains('hidden')){
-//   noJobs.classList.remove('hidden')
-
-//   }
-// }
-// else {
-// if(!noJobs.classList.contains('hidden'))
-// {
-//   noJobs.classList.add('hidden')
-// }
-// }
-
-
-
-
 
 
 }
