@@ -3,6 +3,12 @@ let rejectedList = [];
 let currentStatus = 'all'
 
 
+
+
+
+
+
+
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
@@ -18,7 +24,7 @@ let mainContainer = document.querySelector('main');
 let filterSection = document.getElementById('filtered-section');
 
 let noJobs =document.getElementById('no-jobs');
-// let deleteBtn = document.getElementById('btn-delete')
+// let deleteBtn = document.querySelector('.btn-delete')
 
 
 
@@ -112,10 +118,12 @@ mainContainer.addEventListener('click', function (event) {
           react,
           remote,
           stat:'interview',
-          build
+          build,
+          id:interviewList.length+1
           
 
       }
+
 
   const plantExist = interviewList.find(item => item.mobile == cardInfo.mobile);
 
@@ -250,6 +258,20 @@ filterSection.innerHTML = ''
 
 }
 
+//------------
+
+ let deleteBtn = document.querySelectorAll('.btn-delete')
+
+ for(let btn of deleteBtn){
+  btn.addEventListener('click',function(){
+    let li =btn.parentNode.parentNode
+    
+console.log(li);
+interviewList=interviewList.filter(item => item.id !== id)
+li.remove()
+
+  })
+ }
 
 
 
