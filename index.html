@@ -45,12 +45,13 @@
           </div>
 </header>
 <hr class="max-w-[1110px] mx-auto my-5 text-[#e6e7e9FF]">
+
 <!-- main -->
 <main class="max-w-[1110px] mx-auto px-5">
 
 <div class="flex flex-col pb-3 lg:justify-between lg:flex-row ">
-  <h1 class="text-xl pb-6">Available Jobs</h1>
-  <p> <span> 8 </span> jobs</p>
+        <h1 class="text-xl pb-6">Available Jobs</h1>
+        <p> <span> 8 </span> jobs</p>
 </div>
 <!-- button -->
 <div class="mb-3 flex gap-3">
@@ -64,31 +65,46 @@
 
 </section>
 
+<!-- No jobs available -->
+<section id="no-jobs"  class="hidden">
+  <div class="bg-green-200 rounded-lg p-6 ">
+    <div class="flex justify-center items-center">
+      <img class="h-[100px] w-[100px] " src="./jobs.png" alt="">
+       </div>
+      <h1 class="text-2xl text-center">No jobs available</h1>
+      <p class="text-gray-400 text-center">Check back soon for new job opportunities</p>
+   
+  </div>
+</section>
+
 
 <!-- section all card -->
 <section id="allCards" class="flex flex-wrap lg:flex-col  gap-4">
+
 
           <!-- card-1 -->
 <div class="bg-white rounded-lg p-6 flex flex-col gap-4 lg:flex-row justify-between ">     
           <!-- right -->
           <div class="space-y-5">
                 <div>
-                  <h2 class="mobile text-xl font-semibold">Mobile First Corp</h2>
-                  <p class="react text-[#64748bFF]">React Native Developer</p>
+                    <h2 class="mobile text-xl font-semibold">Mobile First Corp</h2>
+                    <p class="react text-[#64748bFF]">React Native Developer</p>
                 </div> 
-                <p class="remote text-[#64748bFF]">Remote • Full-time •  $130,000 - $175,000</p>   
-                <p class="stat bg-gray-100 inline p-3 rounded-lg uppercase">Not Applied</p><p></p>
-                <p class="build">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="remote text-[#64748bFF]">Remote • Full-time •  $130,000 - $175,000</p>   
+                    <p class="stat bg-gray-100 inline p-3 rounded-lg uppercase">Not Applied</p><p></p>
+                    <p class="build">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 <div class="flex gap-4">
-                  <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
-                  <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
+                    <button class="interview-btn btn btn-outline btn-success uppercase">interview</button>
+                    <button class="rejected-btn btn btn-outline btn-secondary uppercase">Rejected</button>
                 </div>
           </div>
           <!-- left -->
            <div>
+       
             <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
            </div>
 </div>
+
 
 
 <!-- card-2 -->

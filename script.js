@@ -2,6 +2,7 @@ let interviewList = [];
 let rejectedList = [];
 let currentStatus = 'all'
 
+
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
@@ -16,6 +17,9 @@ let allCardSection = document.getElementById('allCards');
 let mainContainer = document.querySelector('main');
 let filterSection = document.getElementById('filtered-section');
 
+let noJobs =document.getElementById('no-jobs');
+// let deleteBtn = document.getElementById('delete-btn')
+
 
 
 function calculateCount() {
@@ -28,6 +32,7 @@ calculateCount()
 
 // step -1;
 function toggleStyle(id) {
+  let variableCount = 0;
           //adding gray bg for all
    allFilterBtn.classList.add('bg-white','text-gray-500');
    interviewFilterBtn.classList.add('bg-white','text-gray-500');
@@ -40,7 +45,7 @@ function toggleStyle(id) {
 
    const selected = document.getElementById(id);
    currentStatus = id
-//    adding blackbg for current button
+//    adding primary bg for current button
      selected.classList.remove('bg-white','text-gray-500');
      selected.classList.add('bg-primary','text-white');
 
@@ -49,17 +54,56 @@ function toggleStyle(id) {
           allCardSection.classList.add('hidden');
           filterSection.classList.remove('hidden');
           renderInterview()
+
+                 
      }
      else if(id == 'all-filter-btn'){
           allCardSection.classList.remove('hidden');
           filterSection.classList.add('hidden');
-
+          
      }
      else if(id == 'rejected-filter-btn'){
           allCardSection.classList.add('hidden');
           filterSection.classList.remove('hidden');
           renderRejected()
+            
      }
+
+// simple
+if (id === 'interview-filter-btn' || id === 'rejected-filter-btn') {
+
+  const filterCount = filterSection.children.length;
+
+  if (filterCount === 0) {
+    noJobs.classList.remove('hidden');
+  } else {
+    noJobs.classList.add('hidden');
+  }
+
+} else {
+  
+  noJobs.classList.add('hidden');
+}
+
+// const filterCount = filterSection.children.length
+// if(filterCount == 0){
+//   if(noJobs.classList.contains('hidden')){
+//   noJobs.classList.remove('hidden')
+
+//   }
+// }
+// else {
+// if(!noJobs.classList.contains('hidden'))
+// {
+//   noJobs.classList.add('hidden')
+// }
+// }
+
+
+
+
+
+
 }
 
 
@@ -85,6 +129,8 @@ mainContainer.addEventListener('click', function (event) {
           remote,
           stat:'interview',
           build
+          
+
       }
 
   const plantExist = interviewList.find(item => item.mobile == cardInfo.mobile);
@@ -123,6 +169,7 @@ mainContainer.addEventListener('click', function (event) {
           remote,
           stat:'rejected',
           build
+          
       }
 
   const plantExist = rejectedList.find(item => item.mobile == cardInfo.mobile);
@@ -174,7 +221,7 @@ function renderInterview() {
           </div>
           <!-- left -->
            <div>
-            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+            <button  class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
            </div>
           `
           filterSection.appendChild(div)
@@ -186,7 +233,7 @@ function renderInterview() {
 
 function renderRejected() {
   //make the filterSection empty every time
-  filterSection.innerHTML = ''
+filterSection.innerHTML = ''
 
   //crating innerHTML
   for(let rejected of rejectedList){
@@ -210,7 +257,7 @@ function renderRejected() {
           </div>
           <!-- left -->
            <div>
-            <button class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
+            <button  class="btn-delete bg-white p-3 rounded-full border border-gray-300"><i class="fa-solid fa-trash-can"></i></button>
            </div>
           `
           filterSection.appendChild(div)
@@ -218,3 +265,8 @@ function renderRejected() {
 
 
 }
+
+
+
+
+
